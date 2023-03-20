@@ -42,7 +42,7 @@ public class BuscarCliente extends AppCompatActivity {
         apellido = (EditText) findViewById(R.id.buscarApellidoCliente);
         puntos = (EditText) findViewById(R.id.buscarPuntosCliente);
         codigo = (EditText) findViewById(R.id.buscarCodigo);
-        dpi = (EditText) findViewById(R.id.buscarDpi);
+        dpi = () findViewById(R.id.buscarDpi);
 
         btnBuscar.setEnabled(false);
 
@@ -57,7 +57,7 @@ public class BuscarCliente extends AppCompatActivity {
                 intentIntegrator.setBeepEnabled(true);
                 intentIntegrator.setBarcodeImageEnabled(true);
                 intentIntegrator.initiateScan();
-                btnBuscar.setEnabled(true);
+                btnBuscar.setEnabled(true)
             }
         });
 
@@ -65,13 +65,12 @@ public class BuscarCliente extends AppCompatActivity {
         try {
 
 
-            btnBuscar.setOnClickListener(new View.OnClickListener() {
+            btnBuscarsetOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     buscarCliente("https://comedic.000webhostapp.com/buscarCliente.php?codigo=" + codigo.getText() + "");
 
-                }
-            });
+            
         }
         catch (Exception e)
         {
