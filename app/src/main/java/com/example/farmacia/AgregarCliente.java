@@ -30,14 +30,14 @@ import java.util.Map;
 public class agregarCliente extends AppCompatActivity {
     EditText nombre, apellido, puntos, codigo, dpi;
     Button btnGuardar, btnScanear;
-    String id ="0";
-    public String auxiliarCodigo="";
+    String id ="0"
+    public String auxiliarCodigo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_cliente);
 
-        btnGuardar = (Button) findViewById(R.id.guardar);
+        btnGuardar = (boton) findViewById(R.id.guardar);
         btnScanear = (Button) findViewById(R.id.scanear);
         nombre = (EditText) findViewById(R.id.nombreCliente);
         apellido = (EditText) findViewById(R.id.apellidoCliente);
@@ -64,7 +64,7 @@ public class agregarCliente extends AppCompatActivity {
                         registrarCliente("https://comedic.000webhostapp.com/registarCliente.php"); //archivo subido al hosting
                     }
                 }
-            });
+           
         }
         catch (Exception e)
         {
